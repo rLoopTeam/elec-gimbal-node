@@ -1,0 +1,447 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:rloop
+LIBS:GimbalNode-cache
+EELAYER 25 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 3 6
+Title "G210 Multiplexers"
+Date ""
+Rev "1"
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Notes 11950 10350 0    118  ~ 0
+rLoop - Gimbal Node\nG210x Multiplexer Interface
+$Comp
+L CONN_01X08_2MNT P?
+U 1 1 5757EB8A
+P 12700 3150
+F 0 "P?" H 12700 3600 50  0000 C CNN
+F 1 "CONN_01X08_2MNT" V 12800 3150 50  0000 C CNN
+F 2 "" H 12700 3150 50  0000 C CNN
+F 3 "" H 12700 3150 50  0000 C CNN
+	1    12700 3150
+	1    0    0    -1  
+$EndComp
+Text Notes 600  650  0    60   ~ 0
+The purpose of this block is to route 6 Step and 6 Direction signals from each of the two teensys and also buffer those signals.\n
+Text Notes 5450 4350 0    60   ~ 0
+Step 1 and 2, Fwd Left and Aft Left Gimbal
+Text Notes 5650 6150 0    60   ~ 0
+Step 3 and  4, Fwd Right and Aft Right Gimbal
+Text Notes 5200 3000 0    60   ~ 0
+At 5V, VinH = 2V\nSafe to interface with 3.3V
+Text Notes 8200 3350 1    60   ~ 0
+15TTL load output capacity
+Wire Wire Line
+	12500 2800 11650 2800
+Wire Wire Line
+	12500 2900 11650 2900
+Wire Wire Line
+	12500 3100 11650 3100
+Wire Wire Line
+	12500 3200 11650 3200
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB8B
+P 12500 3000
+F 0 "#PWR?" H 12500 2750 50  0001 C CNN
+F 1 "GNDD" H 12500 2850 50  0000 C CNN
+F 2 "" H 12500 3000 50  0000 C CNN
+F 3 "" H 12500 3000 50  0000 C CNN
+	1    12500 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB8C
+P 12500 3300
+F 0 "#PWR?" H 12500 3050 50  0001 C CNN
+F 1 "GNDD" H 12500 3150 50  0000 C CNN
+F 2 "" H 12500 3300 50  0000 C CNN
+F 3 "" H 12500 3300 50  0000 C CNN
+	1    12500 3300
+	0    1    1    0   
+$EndComp
+Text Label 11750 2800 0    60   ~ 0
+STEP1_DIR
+Text Label 11750 2900 0    60   ~ 0
+STEP1_STEP
+Text Label 11750 3100 0    60   ~ 0
+STEP2_DIR
+Text Label 11750 3200 0    60   ~ 0
+STEP2_STEP
+Text Notes 13100 3550 1    60   ~ 0
+Twisted pair wiring\nGrounded at this end only
+$Comp
+L CONN_01X08_2MNT P?
+U 1 1 5757EB8D
+P 12650 5050
+F 0 "P?" H 12650 5500 50  0000 C CNN
+F 1 "CONN_01X08_2MNT" V 12750 5050 50  0000 C CNN
+F 2 "" H 12650 5050 50  0000 C CNN
+F 3 "" H 12650 5050 50  0000 C CNN
+	1    12650 5050
+	1    0    0    -1  
+$EndComp
+Text Notes 12050 3800 0    60   ~ 0
+Fwd Left and Aft Left Gimbal Controller
+Wire Wire Line
+	12450 4700 11600 4700
+Wire Wire Line
+	12450 4800 11600 4800
+Wire Wire Line
+	12450 5000 11600 5000
+Wire Wire Line
+	12450 5100 11600 5100
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB8E
+P 12450 4900
+F 0 "#PWR?" H 12450 4650 50  0001 C CNN
+F 1 "GNDD" H 12450 4750 50  0000 C CNN
+F 2 "" H 12450 4900 50  0000 C CNN
+F 3 "" H 12450 4900 50  0000 C CNN
+	1    12450 4900
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB8F
+P 12450 5200
+F 0 "#PWR?" H 12450 4950 50  0001 C CNN
+F 1 "GNDD" H 12450 5050 50  0000 C CNN
+F 2 "" H 12450 5200 50  0000 C CNN
+F 3 "" H 12450 5200 50  0000 C CNN
+	1    12450 5200
+	0    1    1    0   
+$EndComp
+Text Label 11700 4700 0    60   ~ 0
+STEP3_DIR
+Text Label 11700 4800 0    60   ~ 0
+STEP3_STEP
+Text Label 11700 5000 0    60   ~ 0
+STEP4_DIR
+Text Label 11700 5100 0    60   ~ 0
+STEP4_STEP
+Text Notes 13050 5450 1    60   ~ 0
+Twisted pair wiring\nGrounded at this end only
+Text Notes 11900 5700 0    60   ~ 0
+Fwd Right and Aft Right Gimbal Controller
+Text Notes 12000 10500 0    60   ~ 0
+Original Author: SafetyLok
+$Comp
+L 74HCT157 U?
+U 1 1 5757EB93
+P 6250 4050
+F 0 "U?" H 6900 4000 59  0000 C CNN
+F 1 "74HCT157" H 6700 4950 59  0000 C CNN
+F 2 "" H 6250 4050 197 0000 C CNN
+F 3 "" H 6250 4050 197 0000 C CNN
+	1    6250 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 3300 7250 3300
+Wire Wire Line
+	7250 3300 7250 3100
+Wire Wire Line
+	7150 3500 7950 3500
+Wire Wire Line
+	7150 3600 7950 3600
+Wire Wire Line
+	7150 3700 7950 3700
+Wire Wire Line
+	7150 3900 7950 3900
+Wire Wire Line
+	7150 4000 7950 4000
+Wire Wire Line
+	6050 3300 5150 3300
+Wire Wire Line
+	6050 3400 5150 3400
+Wire Wire Line
+	6050 3500 5150 3500
+Wire Wire Line
+	6050 3600 5150 3600
+Wire Wire Line
+	6050 3700 5150 3700
+Wire Wire Line
+	6050 3800 5150 3800
+Wire Wire Line
+	6050 3900 5150 3900
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB94
+P 7200 3400
+F 0 "#PWR?" H 7200 3150 50  0001 C CNN
+F 1 "GNDD" H 7200 3250 50  0000 C CNN
+F 2 "" H 7200 3400 50  0000 C CNN
+F 3 "" H 7200 3400 50  0000 C CNN
+	1    7200 3400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 3400 7200 3400
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB95
+P 6050 4000
+F 0 "#PWR?" H 6050 3750 50  0001 C CNN
+F 1 "GNDD" H 6050 3850 50  0000 C CNN
+F 2 "" H 6050 4000 50  0000 C CNN
+F 3 "" H 6050 4000 50  0000 C CNN
+	1    6050 4000
+	0    1    1    0   
+$EndComp
+Text Label 7200 3700 0    60   ~ 0
+STEP2_STEP
+Text Label 7200 4000 0    60   ~ 0
+STEP2_DIR
+Text Label 5350 3600 0    60   ~ 0
+STEP1_DIR
+Text Label 5350 3900 0    60   ~ 0
+STEP1_STEP
+Text Label 5350 3300 0    60   ~ 0
+GIMBAL_STEP_ENA
+$Comp
+L +5V #PWR?
+U 1 1 5757EB96
+P 7250 3100
+F 0 "#PWR?" H 7250 2950 50  0001 C CNN
+F 1 "+5V" H 7250 3240 50  0000 C CNN
+F 2 "" H 7250 3100 50  0000 C CNN
+F 3 "" H 7250 3100 50  0000 C CNN
+	1    7250 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74HCT157 U?
+U 1 1 5757EB97
+P 6250 5850
+F 0 "U?" H 6900 5800 59  0000 C CNN
+F 1 "74HCT157" H 6700 6750 59  0000 C CNN
+F 2 "" H 6250 5850 197 0000 C CNN
+F 3 "" H 6250 5850 197 0000 C CNN
+	1    6250 5850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7150 5100 7250 5100
+Wire Wire Line
+	7250 5100 7250 4900
+Wire Wire Line
+	7150 5300 7950 5300
+Wire Wire Line
+	7150 5400 7950 5400
+Wire Wire Line
+	7150 5500 7950 5500
+Wire Wire Line
+	7150 5600 7950 5600
+Wire Wire Line
+	7150 5700 7950 5700
+Wire Wire Line
+	7150 5800 7950 5800
+Wire Wire Line
+	6050 5100 5150 5100
+Wire Wire Line
+	6050 5200 5150 5200
+Wire Wire Line
+	6050 5300 5150 5300
+Wire Wire Line
+	6050 5400 5150 5400
+Wire Wire Line
+	6050 5500 5150 5500
+Wire Wire Line
+	6050 5600 5150 5600
+Wire Wire Line
+	6050 5700 5150 5700
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB98
+P 7200 5200
+F 0 "#PWR?" H 7200 4950 50  0001 C CNN
+F 1 "GNDD" H 7200 5050 50  0000 C CNN
+F 2 "" H 7200 5200 50  0000 C CNN
+F 3 "" H 7200 5200 50  0000 C CNN
+	1    7200 5200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	7150 5200 7200 5200
+$Comp
+L GNDD #PWR?
+U 1 1 5757EB99
+P 6050 5800
+F 0 "#PWR?" H 6050 5550 50  0001 C CNN
+F 1 "GNDD" H 6050 5650 50  0000 C CNN
+F 2 "" H 6050 5800 50  0000 C CNN
+F 3 "" H 6050 5800 50  0000 C CNN
+	1    6050 5800
+	0    1    1    0   
+$EndComp
+Text Label 7200 5800 0    60   ~ 0
+STEP4_DIR
+Text Label 5350 5400 0    60   ~ 0
+STEP3_DIR
+Text Label 5350 5700 0    60   ~ 0
+STEP3_STEP
+Text Label 5350 5100 0    60   ~ 0
+GIMBAL_STEP_ENA
+$Comp
+L +5V #PWR?
+U 1 1 5757EB9A
+P 7250 4900
+F 0 "#PWR?" H 7250 4750 50  0001 C CNN
+F 1 "+5V" H 7250 5040 50  0000 C CNN
+F 2 "" H 7250 4900 50  0000 C CNN
+F 3 "" H 7250 4900 50  0000 C CNN
+	1    7250 4900
+	1    0    0    -1  
+$EndComp
+Text HLabel 5150 3300 0    60   Input ~ 0
+GIMBAL_STEP_ENA
+Text HLabel 5150 3500 0    60   Input ~ 0
+GIMBAL1_DIR
+Text HLabel 5150 3800 0    60   Input ~ 0
+GIMBAL1_STEP
+Text HLabel 7950 3600 2    60   Input ~ 0
+GIMBAL2_STEP
+Text HLabel 7950 3900 2    60   Input ~ 0
+GIMBAL2_DIR
+Text HLabel 5150 5300 0    60   Input ~ 0
+GIMBAL3_DIR
+Text HLabel 5150 5600 0    60   Input ~ 0
+GIMBAL3_STEP
+Text HLabel 7950 5400 2    60   Input ~ 0
+GIMBAL4_STEP
+Text HLabel 7950 5700 2    60   Input ~ 0
+GIMBAL4_DIR
+Text Notes 4350 2650 0    60   ~ 0
+Direction High = B-Y
+Wire Wire Line
+	7150 3800 7950 3800
+Text Label 7200 5500 0    60   ~ 0
+STEP4_STEP
+$Comp
+L GNDD #PWR?
+U 1 1 5757F02C
+P 5150 3400
+F 0 "#PWR?" H 5150 3150 50  0001 C CNN
+F 1 "GNDD" H 5150 3250 50  0000 C CNN
+F 2 "" H 5150 3400 50  0000 C CNN
+F 3 "" H 5150 3400 50  0000 C CNN
+	1    5150 3400
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F037
+P 5150 3700
+F 0 "#PWR?" H 5150 3450 50  0001 C CNN
+F 1 "GNDD" H 5150 3550 50  0000 C CNN
+F 2 "" H 5150 3700 50  0000 C CNN
+F 3 "" H 5150 3700 50  0000 C CNN
+	1    5150 3700
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F042
+P 5150 5200
+F 0 "#PWR?" H 5150 4950 50  0001 C CNN
+F 1 "GNDD" H 5150 5050 50  0000 C CNN
+F 2 "" H 5150 5200 50  0000 C CNN
+F 3 "" H 5150 5200 50  0000 C CNN
+	1    5150 5200
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F04D
+P 5150 5500
+F 0 "#PWR?" H 5150 5250 50  0001 C CNN
+F 1 "GNDD" H 5150 5350 50  0000 C CNN
+F 2 "" H 5150 5500 50  0000 C CNN
+F 3 "" H 5150 5500 50  0000 C CNN
+	1    5150 5500
+	0    1    1    0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F058
+P 7950 3500
+F 0 "#PWR?" H 7950 3250 50  0001 C CNN
+F 1 "GNDD" H 7950 3350 50  0000 C CNN
+F 2 "" H 7950 3500 50  0000 C CNN
+F 3 "" H 7950 3500 50  0000 C CNN
+	1    7950 3500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F063
+P 7950 3800
+F 0 "#PWR?" H 7950 3550 50  0001 C CNN
+F 1 "GNDD" H 7950 3650 50  0000 C CNN
+F 2 "" H 7950 3800 50  0000 C CNN
+F 3 "" H 7950 3800 50  0000 C CNN
+	1    7950 3800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F078
+P 7950 5300
+F 0 "#PWR?" H 7950 5050 50  0001 C CNN
+F 1 "GNDD" H 7950 5150 50  0000 C CNN
+F 2 "" H 7950 5300 50  0000 C CNN
+F 3 "" H 7950 5300 50  0000 C CNN
+	1    7950 5300
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GNDD #PWR?
+U 1 1 5757F083
+P 7950 5600
+F 0 "#PWR?" H 7950 5350 50  0001 C CNN
+F 1 "GNDD" H 7950 5450 50  0000 C CNN
+F 2 "" H 7950 5600 50  0000 C CNN
+F 3 "" H 7950 5600 50  0000 C CNN
+	1    7950 5600
+	0    -1   -1   0   
+$EndComp
+$EndSCHEMATC
