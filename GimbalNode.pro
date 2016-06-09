@@ -1,4 +1,4 @@
-update=2016-06-08 7:16:18 PM
+update=2016-06-09 3:40:56 PM
 version=1
 last_client=kicad
 [pcbnew]
@@ -59,3 +59,13 @@ LibName29=valves
 LibName30=E:/LOCKIE/DESIGN/RLOOP/GIT/elec-parts-library/rloop
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60
